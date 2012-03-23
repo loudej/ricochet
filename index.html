@@ -8,7 +8,7 @@
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #1fecc0;
+      /*background-color: #1fecc0;*/
       font-family: Helvetica, Arial, FreeSans, san-serif;
       color: #000000;
     }
@@ -32,6 +32,26 @@
 
 <body>
   <a href="https://github.com/loudej/ricochet"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <script type="text/javascript"><!--
+    function getParameterByName(name)
+    {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + name + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(window.location.search);
+      if(results == null)
+        return "";
+      else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    var state = getParameterByName('state');
+    var port = state.split('-',2)[1];
+    var loc = 'http://localhost:' + port + '/' + window.location.search;
+    document.write(loc);
+    window.location = loc;
+    -->
+  </script>
 
   <div id="container">
 
@@ -59,12 +79,14 @@
 
     
       <h2>Authors</h2>
-      <p>Louis DeJardin (lodejard@microsoft.com)<br/>      </p>
+      <p>Louis DeJardin (lodejard@microsoft.com)
+<br/>      </p>
     
 
     
       <h2>Contact</h2>
-      <p>Louis DeJardin (louis.dejardin@gmail.com)<br/>      </p>
+      <p>Louis DeJardin (louis.dejardin@gmail.com)
+<br/>      </p>
     
 
     <h2>Download</h2>
